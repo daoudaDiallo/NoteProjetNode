@@ -1,0 +1,17 @@
+{
+  "name": "noteprojetnode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.17.2",
+    "express": "^4.15.4",
+    "mysql": "^2.14.1",
+    "officegen": "^0.4.5"
+  }
+}
