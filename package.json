@@ -11,6 +11,7 @@
   "dependencies": {
     "body-parser": "^1.17.2",
     "express": "^4.15.4",
+    "express-list-endpoints": "^3.0.1",
     "mysql": "^2.14.1",
     "officegen": "^0.4.5"
   }
