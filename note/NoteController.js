@@ -8,7 +8,7 @@ var Note = require('./Note');
 router.get('/', function (req, res) {
     Note.getnotes(function(err,rows){
         if(err) {
-            res.json(err);
+            res.status(400).json(err);
         }
         else
         {
@@ -21,7 +21,7 @@ router.post('/', function (req, res) {
     Note.createnote(req.body,function(err,count){
         if(err)
         {
-            res.json(err);
+            res.status(400).json(err);
         }
         else{
             res.json(req.body);

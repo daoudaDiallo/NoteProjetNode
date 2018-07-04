@@ -8,7 +8,7 @@ var Matiere = require('./Matiere');
 router.get('/', function (req, res) {
     Matiere.getmatieres(function(err,rows){
         if(err) {
-            res.json(err);
+            res.status(400).json(err);
         }
         else
         {
@@ -21,7 +21,7 @@ router.post('/', function (req, res) {
     Matiere.creatematiere(req.body,function(err,count){
         if(err)
         {
-            res.json(err);
+            res.status(400).json(err);
         }
         else{
             res.json(req.body);

@@ -12,7 +12,7 @@ var Etudiant = require('./Etudiant');
 router.get('/', function (req, res) {
     Etudiant.getetudiants(function(err,rows){
         if(err) {
-            res.json(err);
+            res.status(400).json(err);
         }
         else
         {
@@ -25,7 +25,7 @@ router.post('/', function (req, res) {
     Etudiant.createetudiant(req.body,function(err,count){
         if(err)
         {
-            res.json(err);
+            res.status(400).json(err);
         }
         else{
             res.json(req.body);
