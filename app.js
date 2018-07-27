@@ -3,9 +3,12 @@
  */
 var express = require('express');
 var app = express();
-var db = require('./db');
+var cors = require('cors');
 
 // ADD THESE TWO LINES
+
+app.use(cors());
+
 var MatiereController = require('./matiere/MatiereController');
 app.use('/matieres', MatiereController);
 
